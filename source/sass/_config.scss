@@ -1,0 +1,69 @@
+//Media breakpoints
+$points: (
+        st: 320,
+        xs: 375,
+        psw: 412,
+        sm: 480,
+        ms: 640,
+        md: 798,
+        def: 1024,
+        lg: 1280,
+        xl: 1366,
+        mg: 1440,
+        hd: 1720,
+        dt: 1980
+);
+
+// COLORS
+$red-1: #FA3030;  //error
+$dark-1: #18191A;  // title texts
+$dark-2: #505050;  // secondary text
+$backgrounds-1: #272A2D;  // backgrounds
+$backgrounds-2: #EEF0F1;  // backgrounds
+$grey: #C5C7CB;  // fields
+$blue: #006CCF; //links
+$green: #3cc395; // buttons
+
+
+//Font families
+$font-family: 'Bebas Neue', cursive;
+$font-style: normal;
+
+//PARAGRAPH STYLES
+$paragraph-margin: 25px; //margin-bottom
+$font-size-paragraph: 18px;
+$paragraph-height: 140%;
+$paragraph-color: $dark-2;
+
+//HEADINGS STYLES
+$font-family-headings: $font-family;
+$heading-margin: 50,45, 40, 35, 30, 25;
+$heading-font-size: 45, 30, 28, 25, 22, 20;
+$heading-font-weight: 700,700,700,600,600,600; // 1 = "normal"(400)
+$heading-uppercase: 0,0,0,0,0,0; // 0 = "none", 1 = "uppercase"
+$heading-text-align: c,c,c,c,c,c; // c = "center", l = "left", r = "right"
+$heading-color: $dark-1;
+$heading-font-style: normal;
+
+// MD Heading sizes (prefix from points)
+$md-heading-change: true;
+$md-heading-margin: 45, 40, 35, 30, 25, 20;
+$md-heading-font-size: false, false, false, false, false, false;
+
+
+$list-image: false;  //list.png
+$background-color: #FFF;
+$link-color: $dark-1;
+$link-hover-color: $dark-1;
+
+//Tables default styles
+$table-margin: 40px;
+$table-border-color: #d6d6d6;
+$table-fz: $font-size-paragraph;
+$table-color: #3c3c3c;
+$table-heading-color: false;
+
+//FORMS
+$font-family-validation: $font-family;
+
+

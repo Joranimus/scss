@@ -1,0 +1,17 @@
+.button {
+    background: $green;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 6px 10px;
+    transition: transform .3s box-shadow .3s;
+
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+}
