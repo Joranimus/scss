@@ -1,11 +1,36 @@
 header{
     padding: 20px 0;
+    @include point(def-down){
+        padding: 10px 0;
+    }
+}
+.header-wrap{
+    margin-left: -10px;
+}
+.logo{
+    @include point(def-down){
+        max-width: 80%;
+    }
 }
 .search{
     display: inline-block;
     height: 30px;
     width: 430px;
     border: 1px solid #e1e1e1;
+    img{
+        transition: filter .3s;
+        &:hover{
+            filter: brightness(0.5);
+        }
+        
+    }
+    @include point(def-md){
+        width: 215px;
+    }
+    @include point(md-down){
+        border: none;
+        width: 30px;
+    }
 
     &__button{
         height: 20px;
@@ -14,5 +39,22 @@ header{
     }
 }
 .bascket{
-    display: inline-block;
+    
+   &-img{
+        @include point(def-down){
+            max-width: 70%;
+        }
+    }
+
+    &__price{
+        display: table-cell;
+        vertical-align: middle;
+        margin-left: 5px;
+        font-size: 33px;
+        color: $grey;
+        @include point(def-down){
+            font-size: 28px;
+        }
+    }
+
 }
