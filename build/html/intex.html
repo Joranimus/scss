@@ -14,42 +14,46 @@
     <script type="application/javascript" src="../js/index.min.js"></script>
 </head>
 <body>
-    <header>
+    <header class="header">
 
-  <div class="container">
-
-    <div class="header-wrap _f _j-between _i-center">
-        <a href="#"><img class="logo" src="../img/logo.png" alt=""></a>
-        <div class="search _f">
-            <div class="search__button">
-                <a href="#"> <img src="../img/loopa.png" alt=""></a>
-            </div>
-        </div>
-    
-        <div class="bascket _f _i-center">
-            <img class="bascket-img" src="../img/basket.png" alt="">
-            <span class="bascket__price">$300</span>
-        </div>
+  <div class="top-line">
+    <div class="container">
+      <div class="header-wrap _f _j-between _i-center">
+          <a href="#"><img class="logo" src="../img/logo.png" alt=""></a>
+          
+          <div class="search__wrap">
+            <form action="/" method="POST" class="search _f _j-between _i-center">
+              <input type="text" class="search__text">
+              <input type="submit" class="search__button" value=" ">
+            </form>
+          </div>
+      
+          <div class="cart">
+  
+              <a class="_tdn cart__price  _f _i-center" href="#">$300</a>
+          </div>
+      </div>
     </div>
-    
+  </div>
+
+
+  <div class="bottom-line">
+    <div class="menu">
+      <div class="container">
+          <nav class="menu-wrap _tdn _f _j-center _i-center">
+              <a href="#" class="menu__text _tdn _no-shrink">home</a>
+              <a href="#" class="menu__text _tdn _no-shrink">sale</a>
+              <a href="#" class="menu__text _tdn _no-shrink">handbags</a>
+              <a href="#" class="menu__text _tdn _no-shrink">wallets</a>
+              <a href="#" class="menu__text _tdn _no-shrink">contact us</a>
+          </nav>
+          <div id="nav-trigger" onclick="showMenu();">MENU</div>
+      </div>
+  </div>
   </div>
 
 </header>
 
-    <div class="menu">
-    <div class="container">
-        <div class="menu-wrap _tdn _f _j-center _i-center">
-            <a href="#" class="menu-text _tdn _no-shrink">home</a>
-            <a href="#" class="menu-text _tdn _no-shrink">sale</a>
-            <a href="#" class="menu-text _tdn _no-shrink">handbags</a>
-            <a href="#" class="menu-text _tdn _no-shrink">wallets</a>
-            <a href="#" class="menu-text _tdn _no-shrink">contact us</a>
-
-            <a href="#" class="menu-text-small _tdn _no-shrink">menu</a>
-            
-        </div>
-    </div>
-</div>
 
 <div class="shopblock">
     <div class="container">

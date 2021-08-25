@@ -1,7 +1,18 @@
-header{
+.header{
     padding: 20px 0;
     @include point(def-down){
         padding: 10px 0;
+    }
+    .container {
+        @include point(def-down){
+            position: relative;
+        }
+    }
+}
+.top-line{
+    margin-bottom: 20px;
+    @include point(def-down){
+        margin-bottom: 10px;
     }
 }
 .header-wrap{
@@ -12,49 +23,110 @@ header{
         max-width: 80%;
     }
 }
+.search__wrap{
+    flex-grow: 2;
+    padding: 0 20px;
+}
 .search{
-    display: inline-block;
-    height: 30px;
-    width: 430px;
-    border: 1px solid #e1e1e1;
-    img{
+    width: 100%;
+    text-align:center;
+    &__text{
+        display: inline-block;
+        height: 30px;
+        width: calc(100% - 30px);
+        border: 1px solid #e1e1e1;
+    }
+
+    &__button{
+        height: 25px;
+        width: 25px;
+        flex-shrink: 0;
+        background: none;
+        border: none;
+        background-image: url(../img/loopa.png);
+        background-position: center center;
+        background-repeat: no-repeat;
         transition: filter .3s;
         &:hover{
             filter: brightness(0.5);
         }
-        
-    }
-    @include point(def-md){
-        width: 215px;
-    }
-    @include point(md-down){
-        border: none;
-        width: 30px;
-    }
-
-    &__button{
-        height: 20px;
-        width: 20px;
-        margin: 4px 4px 4px auto;
     }
 }
-.bascket{
-    
-   &-img{
-        @include point(def-down){
-            max-width: 70%;
-        }
-    }
 
+.cart{
+    
     &__price{
-        display: table-cell;
-        vertical-align: middle;
-        margin-left: 5px;
         font-size: 33px;
         color: $grey;
+        &::before{
+            content: " ";
+            display: inline-block;
+            margin: 5px ;
+            height: 40px;
+            width: 40px;
+            background-image: url(../img/cart.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            @include point(def-down){
+                height: 30px;
+                width: 30px;
+            }
+        }    
         @include point(def-down){
             font-size: 28px;
         }
     }
 
+}
+
+.menu{
+    background: $green-lite;
+    padding: 10px;
+}
+
+.menu__text{
+    margin: 0 10px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 21px;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transition: color .3s;
+
+    &:hover{
+        color: #dbdbdb;
+    }
+
+    &-small{
+        @include point(ms-up){
+            display: none;
+        }
+        @include point(ms-down){
+            display: block;
+        }
+    }
+}
+#nav-trigger {
+    display: none;
+    @include point(def-down){
+        display: block;
+    }
+}
+.menu-wrap {
+    @include point(def-down){
+        display: none;
+        &.open {
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: calc(100% + 10px);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background: blue;    
+            z-index: 2;  
+          }
+    }
 }
