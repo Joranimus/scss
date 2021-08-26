@@ -6,7 +6,9 @@
           <a href="#"><img class="logo" src="../img/logo.png" alt=""></a>
           
           <div class="search__wrap">
+            <div class="search__button search__button-small" onclick="showMenu('search','search__text');"></div>
             <form action="/" method="POST" class="search _f _j-between _i-center">
+              <div class="search__closer closer" onclick="showMenu('search','search__text');">X</div>
               <input type="text" class="search__text">
               <input type="submit" class="search__button" value=" ">
             </form>
@@ -23,15 +25,16 @@
 
   <div class="bottom-line">
     <div class="menu">
-      <div class="container">
+      <div class="container _f _j-center">
           <nav class="menu-wrap _tdn _f _j-center _i-center">
               <a href="#" class="menu__text _tdn _no-shrink">home</a>
               <a href="#" class="menu__text _tdn _no-shrink">sale</a>
               <a href="#" class="menu__text _tdn _no-shrink">handbags</a>
               <a href="#" class="menu__text _tdn _no-shrink">wallets</a>
               <a href="#" class="menu__text _tdn _no-shrink">contact us</a>
+              <div class="menu-wrap__closer closer" onclick="showMenu('menu-wrap','menu-wrap__closer');">X</div>
           </nav>
-          <div id="nav-trigger" onclick="showMenu();">MENU</div>
+          <div id="nav-trigger" onclick="showMenu('menu-wrap','menu-wrap__closer');">MENU</div>
       </div>
   </div>
   </div>

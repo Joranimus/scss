@@ -97,8 +97,8 @@ function watch(done){
     const js_index_watcher = gulp.watch([js_source + 'index.js']);
     const js_libs_watcher = gulp.watch([js_source + 'lib/*.js']);
     const sprite_watcher = gulp.watch([sprite_source + '*.svg']);
-    const html_watcher = gulp.watch([html_source + '*.html']);
-    const sass_watcher = gulp.watch([sprite_source + '*.scss']);
+    const html_watcher = gulp.watch([html_source + '**/*.html']);
+    const sass_watcher = gulp.watch([sass_source+'**/*.(sass|scss)']);
 
     js_index_watcher.on('change', function(path, stats) {
         console.log(`File ${path} was changed`);

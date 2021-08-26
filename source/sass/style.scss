@@ -18,6 +18,8 @@
 
 //libs
 @import "lib/_select2";
+@import "lib/slick";
+@import "lib/slick-theme";
 
 //components
 @import "components/button";
@@ -29,4 +31,4 @@
 //layouts
 @import "layouts/catalog";
 @import "layouts/header";
-
+@import "layouts/slider";
