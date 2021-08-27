@@ -12,12 +12,10 @@
 .top-line{
     margin-bottom: 20px;
     @include point(def-down){
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
 }
-.header-wrap{
-    margin-left: -10px;
-}
+
 .logo{
     @include point(def-down){
         max-width: 80%;
@@ -26,11 +24,14 @@
 .search__wrap{
     flex-grow: 2;
     padding: 0 20px;
+    @include point(def-down){
+        padding: 0;
+    }
 }
 .search{
     width: 100%;
     text-align:center;
-    @include point(sm-down){
+    @include point(def-down){
         display: none;
     }
     &__text{
@@ -58,16 +59,16 @@
         }
         &-small{
             display: none;
-            margin: 0 auto;
+            margin-left: auto;
             cursor: pointer;
-            @include point(sm-down){
+            @include point(def-down){
                 display: block;
             }
         }
     }
     &__closer{
         display: none;
-        @include point (sm-down){
+        @include point (def-down){
             display: inline-block;
             position: fixed;
             top: 6px;
@@ -114,6 +115,14 @@
     }
 
 }
+.bottom-line{
+    @include point(def-down){
+        display: none;
+    }
+    &.open{
+        display: block;
+    }
+}
 
 .menu{
     background: $green-lite;
@@ -145,13 +154,12 @@
 }
 #nav-trigger {
     display: none;
-    margin: 0 10px;
-    padding: 0 20px;
+
+    padding: 4px 10px 0;
     text-transform: uppercase;
-    color: #fff;
-    font-size: 21px;
-    border-left: 2px solid #fff;
-    border-right: 2px solid #fff;
+    color: $green-lite;
+    font-size: 28px;
+
     transition: color .3s;
     flex-grow: 0;
     cursor: pointer;

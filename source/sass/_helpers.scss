@@ -227,3 +227,9 @@
 ._p-none {
   pointer-events: none;
 }
+input[type='checkbox']{
+  display: none;
+}
+input[type='checkbox']:checked + span {
+  
+}

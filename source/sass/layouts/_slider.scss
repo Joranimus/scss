@@ -2,28 +2,93 @@
     background: $green-lite;
     padding: 20px 0;
 }
+.slick-slide {
+    &.slick-current {
+        .slide {
+            &__content {
+                img {
+                    opacity: 1;
+                }
+            }
+            &__text {
+                &-first, &-second {
+                    opacity: 1;
+                }
+                &__button {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
 .slide{
     &__content{
         margin: 0 20px;
+        @include point(def-down){
+            flex-direction: column;
+        }
+        img{
+            opacity: 0;
+            transition: opacity .3s;
+            transition-delay: .5s;
+            @include point(def-down){
+                height: 300px;
+                object-fit: contain;
+                margin-bottom: 20px;
+            }
+        }
     }
     &__text{
         color: #fff;
         max-width: 50%;
+        margin-right: 20px;
+        @include point(def-down){
+            max-width: 100%;
+            text-align: center;
+            margin-right: 0;
+            padding: 0 10px;
+        }
         &-first{
+            opacity: 0;
+            transition: opacity .3s;
+            transition-delay: .5s;
             font-size: 61px;
             margin-bottom: 20px;
+            @include point(def-down){
+                font-size: 50px;
+                margin-bottom: 15px;
+            }
         }
         &-second{
+            opacity: 0;
+            transition: opacity .3s;
+            transition-delay: .7s;
+            font-family: $font-family-alt;
             font-size: 17px;
             margin-bottom: 30px;
+            padding-right: 50px;
+            font-weight: 300;
+            @include point(def-down){
+                font-size: 14px;
+                padding-right: 5px;
+                margin-bottom: 20px;
+            }
         }
         &__button{
+            opacity: 0;
+            transition: opacity .3s;
+            transition-delay: .9s;
+            display: inline-block;
             color: #fff;
             text-transform: uppercase;
             font-size: 25px;
             border: 3px solid #fff;
             border-radius: 7px;
             padding: 2px 22px 0;
+            @include point(def-down){
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
         }
     }
 }
